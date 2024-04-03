@@ -3,31 +3,82 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0,0%,100%);
+  --baseColor:hsl(266, 94%, 49%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--black);
+  background-color: var(--white);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+button {
+  color: var(--text-background-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  body {
+    color: var(--white);
+    background-color: var(--black);
+  }
+
+  textarea, select, input {
+    color: var(--black);
+  }
+  input[type='file'] {
+    color: var(--white);  
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.max-w-108 {
+  max-width: 32rem;
+}
+.max-w-120 {
+  max-width: 40rem;
+}
+
+.max-w-130 {
+  max-width: 45rem;
+}
+.introduction {
+  background-color: 	var(--baseColor);
+}
+
+.projectComponent {
+  max-width:60%;
+  width: 30rem;
+}
+@font-face {
+  font-family: 'euros';
+  src: url('../public/euros.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'graphik';
+  src: url('../public/Relative.ttf') format('truetype');
+}
+.euros {
+  font-family: 'euros', 'graphik', 'serif';
+}
+
+.hexagon {
+  transform: rotate(270deg);  
+}
+.base-text-color:hover {
+  background-color:var(--baseColor);
 }

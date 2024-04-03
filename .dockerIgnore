@@ -1,6 +1,0 @@
-# Ignore node_modules (since we install dependencies inside the container)
-node_modules
-
-
-# Ignore the .next folder (since we rebuild the app inside the container)
-.next

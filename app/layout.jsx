@@ -3,8 +3,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "ShareDoc",
-  description: "Share and upload file using a public Link",
+  title: "Rohit Manoj Pandey",
+  description: "I am afull stack freelance Next JS developer, for creating web apps",
 };
 
 export default function RootLayout({ children }) {

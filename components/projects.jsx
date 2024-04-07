@@ -9,14 +9,14 @@ const projectsArray = [
     description: "Document Storing and sharing web app",
     link: "https://chess-mern-1vrp.vercel.app/app",
     image: Project2,
-    technology: [ 'Next JS','HTML5','CSS3','JS','Mongo DB','Express JS','React JS','Google Cloud Storage']
+    technology: [ 'Next JS','HTML5','CSS3','Node JS','Mongo DB','Express JS','React JS','Google Cloud Storage']
   },
   {
     name: "Zoomcar Rental",
     description: "Car Rental App",
     link: "https://chess-mern-1vrp.vercel.app/app",
     image: Project1,
-    technology: ['React JS','Express JS','HTML5','CSS3','JS','Mongo DB','Google Cloud Storage']
+    technology: ['React JS','Express JS','HTML5','CSS3','Node JS','Mongo DB','Google Cloud Storage']
   },
 ];
 import { Roboto } from "next/font/google";
@@ -47,13 +47,12 @@ export default function projects() {
                 width={0}
                 alt="ProjectImage"
               />
-              <h2 className="font-bold px-4 pt-8 text-2xl">
-                Name: {project.name}
+              <h2 className={`font-bold px-4 pt-8 text-xl`}>
+                Name<span className={`${roboto.className}`}>: {project.name}</span>
               </h2>
               <p className={`font-normal px-4 text-xl`}>
-                Description:{" "}
-                <span className={`${roboto.className} text-lg font-normal`}>
-                  {project.description}
+                Description<span className={`${roboto.className} text-lg font-normal`}>
+                   : {project.description}
                 </span>
               </p>
               <div className="font-normal px-4 text-xl flex gap-2">
@@ -62,7 +61,7 @@ export default function projects() {
                 <span className="flex flex-wrap gap-2">{
                   project.technology.map( (tech, index) => {
                     ////console.log(tech, index);
-                    return <div key={index} className="bg-slate-200 rounded-lg py-2 px-4 text-black ">{tech}</div>
+                    return <div key={index} className={`bg-slate-200 text-base font-bold rounded-lg py-2 px-4 text-black ${roboto.className}`}>{tech}</div>
                   })
                 }
                 </span> 

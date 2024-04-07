@@ -35,6 +35,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+Dockerfile
+.dockerignore
 
 .env
 node_modules
+
+Dockerfile
+.dockerignore

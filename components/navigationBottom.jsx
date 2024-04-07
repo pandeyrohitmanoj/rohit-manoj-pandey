@@ -15,7 +15,7 @@ export default function navigationBottom() {
     <section id="navigation-Bottom" className="bg-slate-900 flex text-white justify-center content-center">
         <div className="grid grid-cols-1  p-4 [&>*:nth-child(odd)]:mt-4 [&>*:nth-child(even)]:mt-2 lg:grid-cols-2 w-5/6">
           <div className="font-bold text-xl">Social</div>
-          <div  className="flex flex-wrap sm:gap-1 *:h-8 *:w-8 gap-10 lg:row-start-2 lg:col-start-1">
+          <div  className="flex flex-wrap sm:gap-3 *:h-8 *:w-8 gap-10 lg:row-start-2 lg:col-start-1">
               <Link href='https://www.facebook.com/profile.php?id=100021839953940' ><Image src={FacebookImage} alt="Instagram_icon"  className="" height={0} width={0} /></Link>
               <Link href="https://www.instagram.com/rohit_red_arcade/"><Image src={InstaImage} alt="feacebook_icon" className="" height={0} width={0} /></Link>
               <Link href="https://www.linkedin.com/in/rohit-manoj-pandey/"><Image src={LinkedinImage} alt="linkedin_icon" className="" height={0} width={0} /></Link>

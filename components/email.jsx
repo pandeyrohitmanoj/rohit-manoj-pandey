@@ -14,7 +14,7 @@ const formFields = [
 //   //console.log(service_id);
   const emailRegex = new RegExp('[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$')
   const nameRegex = new RegExp('^[a-zA-Z]{1,10}$')
-  const messageRegex = new RegExp('^[a-zA-Z0-9!@#$%^&*()-_=+`~]{1,100}$')
+  const messageRegex = new RegExp('^[a-zA-Z0-9 _]{1,150}$')
 const ContactForm = () => {
     const [ buttonActive,setButtonActive ]= useState(false)
     const [ user, setUser ] = useState({
@@ -37,10 +37,15 @@ const ContactForm = () => {
     //console.log(service_id, template_key, templateParams);
       emailjs.send(service_id, template_key, templateParams)
         .then(function(response) {
-          //console.log('Email sent successfully:', response.status, response.text);
-          // You can add any success message or further actions here
+          
+        setUser({
+          Email:'',
+          Name:'',
+          Message:'',
+      })
+        setButtonActive(false)
         }, function(error) {
-          //console.log('Error sending email:', error);
+          console.log('Error sending email:', error);
           // You can add an error message or handle the error condition here
         })
   };

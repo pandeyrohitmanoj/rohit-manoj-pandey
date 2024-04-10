@@ -7,20 +7,23 @@ const projectsArray = [
   {
     name: "ShareDoc",
     description: "Document Storing and sharing web app",
-    link: "https://chess-mern-1vrp.vercel.app/app",
+    githubLink: "https://github.com/pandeyrohitmanoj/sharedoc.git",
+    projectLink: "https://sharedoc-yqmtcbehnq-el.a.run.app/dashboard",
     image: Project2,
     technology: [ 'Next JS','HTML5','CSS3','Node JS','Mongo DB','Express JS','React JS','Google Cloud Storage']
   },
   {
     name: "Zoomcar Rental",
     description: "Car Rental App",
-    link: "https://chess-mern-1vrp.vercel.app/app",
+    githubLink: "https://github.com/pandeyrohitmanoj/chess-mern.git",
+    projectLink: "https://chess-mern-1vrp.vercel.app/app",
     image: Project1,
     technology: ['React JS','Express JS','HTML5','CSS3','Node JS','Mongo DB','Google Cloud Storage']
   },
 ];
 import { Roboto } from "next/font/google";
 import { OpacityAnimation } from "./popUpAnimation";
+import Link from "next/link";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
@@ -67,12 +70,12 @@ export default function projects() {
                 </span> 
               </div>
               <section className="grid px-4 mt-8 grid-cols-2 gap-4 pb-8 ">
-                <button className="w-full px-4 border-2 text-center border-slate-300 inline">
+                <Link href="https://github.com/pandeyrohitmanoj/chess-mern.git" className="w-full px-4 border-2 text-center border-slate-300 inline">
                   Github
-                </button>
-                <button className="w-full px-4  border-2 text-center border-slate-300 inline">
+                </Link>
+                <Link href="https://chess-mern-1vrp.vercel.app/" className="w-full px-4  border-2 text-center border-slate-300 inline">
                   Live App
-                </button>
+                </Link>
               </section>
               </OpacityAnimation>
             </article>

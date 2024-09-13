@@ -10,7 +10,7 @@ const projectsArray = [
     githubLink: "https://github.com/pandeyrohitmanoj/sharedoc.git",
     projectLink: "https://sharedoc-yqmtcbehnq-el.a.run.app/dashboard",
     image: Project2,
-    technology: [ 'Next JS','HTML5','CSS3','Node JS','Mongo DB','Express JS','React JS','Google Cloud Storage']
+    technology: [ 'Next JS','HTML5','CSS3','Node JS','Mongo DB','Express JS','React JS','Google Cloud Storage', 'Framer Motion']
   },
   {
     name: "Zoomcar Rental",
@@ -18,7 +18,7 @@ const projectsArray = [
     githubLink: "https://github.com/pandeyrohitmanoj/chess-mern.git",
     projectLink: "https://chess-mern-1vrp.vercel.app/app",
     image: Project1,
-    technology: ['React JS','Express JS','HTML5','CSS3','Node JS','Mongo DB','Google Cloud Storage']
+    technology: ['React JS','Express JS','HTML5','CSS3','Node JS','Mongo DB','Google Cloud Storage','Framer Motion']
   },
 ];
 import { Roboto } from "next/font/google";

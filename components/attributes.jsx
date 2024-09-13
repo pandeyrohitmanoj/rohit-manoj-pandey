@@ -9,7 +9,7 @@ import rocket from '../public/scalable.svg'
 import Security from '../public/security.svg'
 import Dynamic from '../public/dynamic (1).svg'
 const ImageArray = [
-    {img:Dynamic,title:'Dynamic',description:'Websites can be dynamic; I find joy in bringing pages to life.'},
+    {img:Dynamic,title:'Dynamic',description:'Websites can be dynamic,and I find joy in bringing pages to life.'},
     {img:responsive,title:'Responsive',description:'Our responsive design, brings seamless browsing on any device.'},
     {img:Security,title:'Secure',description:'Enhance security and user experiences effortlessly'},
     {img:rocket,title:'Scalable',description:'Deliver scalable solutions with lightning-fast page loads and API responses.'},

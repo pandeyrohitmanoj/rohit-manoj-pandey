@@ -5,7 +5,8 @@ export function PopUpAnimation({children,duration}) {
     <motion.article     
         initial={{ opacity:0,}}
         whileInView={{ opacity:1,}}
-        transition={{duration}}
+      viewport={{once:true}}
+      transition={{duration}}
     >
         {children}
     </motion.article>
@@ -18,6 +19,7 @@ export function LeftAnimation({children,duration}) {
       initial={{left:-100,}}
       whileInView={{left:0,}}
       transition={{duration}}
+      viewport={{once:true}}
     >
       {children}
     </motion.div>
@@ -28,6 +30,7 @@ export function RightAnimation({children,duration}) {
     <motion.div
       initial={{right:100, scale:0.25}}
       whileInView={{right:0, scale: 1}}
+      viewport={{once:true}}
       transition={{duration}}
     >
       {children}
@@ -39,6 +42,7 @@ export function ScaleAnimation({children,duration}) {
     <motion.div
       initial={{scale:0.25}}
       whileInView={{scale:1}}
+      viewport={{once:true}}
       transition={{duration}}
     >
       {children}
@@ -50,6 +54,7 @@ export function OpacityAnimation({children,duration}) {
     <motion.div
       initial={{opacity:0}}
       whileInView={{opacity:1}}
+      viewport={{once:true}}
       transition={{duration,}}
     >
       {children}

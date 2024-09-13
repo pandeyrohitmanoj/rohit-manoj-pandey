@@ -86,8 +86,8 @@ const ContactForm = () => {
   }
   
   return (
-    <form id='' action={handleSubmit} className='w-full flex flex-col max-w-130 mx-auto px-10 pb-20'>
-        <h2 className='text-3xl text-center '>Thanks for taking the time to reach out. How can I help you today?</h2>
+    <form action={handleSubmit} className='w-full flex flex-col max-w-130 mx-auto px-10 pb-20'>
+        <h2 className='text-3xl text-center font-bold '>Thanks for taking the time to reach out. <br/>How can I help you?</h2>
       {formFields.map((field, index) => (
         <label key={index} className='grid grid-cols-1 gap-2 my-2 w-5/6 mx-auto text-xl'>
           {field.label}:

@@ -24,16 +24,13 @@ const projectsArray = [
 import { Roboto } from "next/font/google";
 import { OpacityAnimation } from "./popUpAnimation";
 import Link from "next/link";
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-});
+
 let duration=0
 export default function projects() {
   return (
     <section id="projects" className="mb-28">
       <h2 className="text-center text-4xl font-bold mb-28">My Projects</h2>
-      <section className="flex justify-center items-center flex-wrap  gap-16  overflow-auto w-full mx-auto">
+      <section className="flex justify-center items-center flex-wrap  gap-16 overflow-auto w-full mx-auto">
         {projectsArray.map((project, index) => {
           duration+=0.25
           return (
@@ -51,29 +48,29 @@ export default function projects() {
                 alt="ProjectImage"
               />
               <h2 className={`font-bold px-4 pt-8 text-xl`}>
-                Name<span className={`${roboto.className}`}>: {project.name}</span>
+                Name<span className={`font-normal`}>: {project.name}</span>
               </h2>
-              <p className={`font-normal px-4 text-xl`}>
-                Description<span className={`${roboto.className} text-lg font-normal`}>
+              <p className={`font-bold  px-4 text-xl`}>
+                Description<span className={`text-lg font-normal`}>
                    : {project.description}
                 </span>
               </p>
-              <div className="font-normal px-4 text-xl flex gap-2">
+              <div className="font-bold  px-4 text-xl flex gap-2">
                 Technology: 
                 {/* {project.technology.map( tech => tech+' ,')} */}
                 <span className="flex flex-wrap gap-2">{
                   project.technology.map( (tech, index) => {
                     ////console.log(tech, index);
-                    return <div key={index} className={`bg-slate-200 text-base font-bold rounded-lg py-2 px-4 text-black ${roboto.className}`}>{tech}</div>
+                    return <div key={index} className={`bg-slate-200 text-base font-bold rounded-lg py-2 px-4 text-black hover:bg-black hover:text-white hover:border-white hover:border cursor-default `}>{tech}</div>
                   })
                 }
                 </span> 
               </div>
-              <section className="grid px-4 mt-8 grid-cols-2 gap-4 pb-8 ">
-                <Link href="https://github.com/pandeyrohitmanoj/chess-mern.git" className="w-full px-4 border-2 text-center border-slate-300 inline">
+              <section className="grid px-4 mt-8 grid-cols-2 gap-4 pb-8">
+                <Link href="https://github.com/pandeyrohitmanoj/chess-mern.git" className="font-bold w-full px-4 border-2 text-center border-slate-300 inline hover:bg-white hover:text-black">
                   Github
                 </Link>
-                <Link href="https://chess-mern-1vrp.vercel.app/" className="w-full px-4  border-2 text-center border-slate-300 inline">
+                <Link href="https://chess-mern-1vrp.vercel.app/" className="font-bold w-full px-4 hover:bg-white hover:text-black border-2 text-center border-slate-300 inline">
                   Live App
                 </Link>
               </section>

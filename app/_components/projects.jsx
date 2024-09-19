@@ -1,7 +1,7 @@
-"use client";
+"use client"
 import React from "react";
-import Project1 from "../public/project1.png";
-import Project2 from "../public/Project2.png";
+import Project1 from "../../public/project1.png";
+import Project2 from "../../public/Project2.png";
 import Image from "next/image";
 const projectsArray = [
   {
@@ -21,7 +21,6 @@ const projectsArray = [
     technology: ['React JS','Express JS','HTML5','CSS3','Node JS','Mongo DB','Google Cloud Storage','Framer Motion']
   },
 ];
-import { Roboto } from "next/font/google";
 import { OpacityAnimation } from "./popUpAnimation";
 import Link from "next/link";
 
@@ -30,12 +29,12 @@ export default function projects() {
   return (
     <section id="projects" className="mb-28">
       <h2 className="text-center text-4xl font-bold mb-28">My Projects</h2>
-      <section className="flex justify-center items-center flex-wrap  gap-16 overflow-auto w-full mx-auto">
+      <section className="flex justify-center items-start flex-wrap  gap-16 overflow-auto w-full mx-auto">
         {projectsArray.map((project, index) => {
           duration+=0.25
           return (
             <article
-              className="flex flex-col flex-wrap shadow-xl max-w-full gap-2 projectComponent hover:border hover:border-1 border-slate-100 rounded-xl overflow-hidden"
+              className="flex flex-col flex-wrap shadow-xl max-w-full gap-2 projectComponent hover:border hover:border-1 border-slate-100 rounded-xl overflow-hidden mb-10"
               key={index}
             >
             <OpacityAnimation duration={duration}>

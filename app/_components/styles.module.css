@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../public//Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+.roboto {
+    font-family: 'MyCustomFont';
+}

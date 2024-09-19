@@ -1,15 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import FacebookImage from '../public/facebook.png'
-import InstaImage from '../public/insta.png'
-import LinkedinImage from '../public/linkedin.png'
-import TwitterImage from '../public/twitter.png'
-import { Roboto } from "next/font/google"
+import FacebookImage from '../../public/facebook.png'
+import InstaImage from '../../public/insta.png'
+import LinkedinImage from '../../public/linkedin.png'
+import TwitterImage from '../../public/twitter.png'
+import styles from './styles.module.css'
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['500']
-})
 export default function navigationBottom() {
   return (
     <section id="navigation-Bottom" className="bg-slate-900 flex text-white justify-center content-center">
@@ -22,8 +18,8 @@ export default function navigationBottom() {
               <Link href="https://twitter.com/pandeyg42848875"><Image src={TwitterImage} alt="twitter_icon" className="" height={0} width={0} /></Link>
               </div>
           <div className="font-bold text-xl">Rohit pandey</div>
-          <div className={`${roboto.className}`}>
-            I am a Web App Developer, and I like to creates user-freindly web application using Javascript to create Illusive, Scalable websites.
+          <div className={`${styles.roboto}`}>
+            I am a Web App Developer, and I like to create  web application using Javascript to create Illusive, Scalable websites.
           </div>
           <hr className="lg:col-span-2"/>
           <div className="text-center font-bold lg:col-span-2">Created by Rohit pandey</div>

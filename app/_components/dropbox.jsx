@@ -1,13 +1,8 @@
 
-const options = [
-    'front-page',
-    'attributes',
-    'introduction',
-    'projects',
-]
+
 import Link from "next/link"
 
-export default function Dropbox() {
+export default function Dropbox({options, parentCss, childClass}) {
     const handleScroll = (e) => {
         e.preventDefault(); // Prevent the default behavior
         const href = e.currentTarget.href;
@@ -17,10 +12,10 @@ export default function Dropbox() {
           elem.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly to the element
         }
       };
-    return <div className='flex justify-center items-center flex-col'>
+    return <div className={parentCss}>
         {
             options.map( (option,index) => {
-                return <Link key={index} href={`/#${option}`} onClick={handleScroll}>{option}</Link>
+                return <Link key={index} href={`/#${option}`} onClick={handleScroll} className={`capitalize block my-0.5 px-2 font-bold hover:text-[#6D07F2] ${childClass} `}>{option}</Link>
             })
         }
     </div>

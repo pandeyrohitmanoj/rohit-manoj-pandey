@@ -1,6 +1,15 @@
-# Ignore node_modules (since we install dependencies inside the container)
+# .dockerignore
 node_modules
-.git
-.env
-# Ignore the .next folder (since we rebuild the app inside the container)
+npm-debug.log
 .next
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+.nyc_output
+coverage
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
